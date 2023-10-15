@@ -1,39 +1,157 @@
-[debug] [2023-10-15T15:54:42.633Z] ----------------------------------------------------------------------
-[debug] [2023-10-15T15:54:42.635Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase init
-[debug] [2023-10-15T15:54:42.635Z] CLI Version:   11.24.1
-[debug] [2023-10-15T15:54:42.635Z] Platform:      linux
-[debug] [2023-10-15T15:54:42.635Z] Node Version:  v18.13.0
-[debug] [2023-10-15T15:54:42.636Z] Time:          Sun Oct 15 2023 21:24:42 GMT+0530 (India Standard Time)
-[debug] [2023-10-15T15:54:42.636Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:02:22.879Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:02:22.880Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase deploy
+[debug] [2023-10-15T16:02:22.881Z] CLI Version:   11.24.1
+[debug] [2023-10-15T16:02:22.881Z] Platform:      linux
+[debug] [2023-10-15T16:02:22.881Z] Node Version:  v18.13.0
+[debug] [2023-10-15T16:02:22.881Z] Time:          Sun Oct 15 2023 21:32:22 GMT+0530 (India Standard Time)
+[debug] [2023-10-15T16:02:22.881Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-10-15T15:54:42.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-10-15T15:54:42.641Z] > authorizing via signed-in user (rishab.james@gmail.com)
-[info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  /home/rishabnt/Code/gpt-bookbuddy
-
-[info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2023-10-15T15:54:47.822Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2023-10-15T15:54:48.758Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2023-10-15T15:54:48.758Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project gpt-bookbuddy (gpt-bookbuddy) 
-[info] 
-=== Hosting Setup
-[info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
-[info] 
+[debug] [2023-10-15T16:02:22.948Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-15T16:02:22.948Z] > authorizing via signed-in user (rishab.james@gmail.com)
+[debug] [2023-10-15T16:02:22.948Z] [iam] checking project gpt-bookbuddy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-15T16:02:22.950Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions [none]
+[debug] [2023-10-15T16:02:22.950Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions x-goog-quota-user=projects/gpt-bookbuddy
+[debug] [2023-10-15T16:02:22.951Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:02:24.350Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions 200
+[debug] [2023-10-15T16:02:24.350Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:02:24.353Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy [none]
+[debug] [2023-10-15T16:02:25.048Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy 200
+[debug] [2023-10-15T16:02:25.049Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy {"projectId":"gpt-bookbuddy","projectNumber":"999723883593","displayName":"gpt-bookbuddy","name":"projects/gpt-bookbuddy","resources":{"hostingSite":"gpt-bookbuddy"},"state":"ACTIVE","etag":"1_860b4843-546f-43c3-9b49-e1c2b498ebde"}
+[debug] [2023-10-15T16:02:45.553Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/home/rishabnt/Code/gpt-bookbuddy/node_modules/next/dist/server/config.js:571:41)
+    at getConfig (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:304:28)
+    at build (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:60:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async prepareFrameworks (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-10-15T16:09:33.351Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:09:33.352Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase deploy
+[debug] [2023-10-15T16:09:33.353Z] CLI Version:   11.24.1
+[debug] [2023-10-15T16:09:33.353Z] Platform:      linux
+[debug] [2023-10-15T16:09:33.353Z] Node Version:  v18.13.0
+[debug] [2023-10-15T16:09:33.353Z] Time:          Sun Oct 15 2023 21:39:33 GMT+0530 (India Standard Time)
+[debug] [2023-10-15T16:09:33.353Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-15T16:09:33.409Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-15T16:09:33.409Z] > authorizing via signed-in user (rishab.james@gmail.com)
+[debug] [2023-10-15T16:09:33.409Z] [iam] checking project gpt-bookbuddy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-15T16:09:33.411Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions [none]
+[debug] [2023-10-15T16:09:33.411Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions x-goog-quota-user=projects/gpt-bookbuddy
+[debug] [2023-10-15T16:09:33.411Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:09:34.724Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions 200
+[debug] [2023-10-15T16:09:34.725Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:09:34.726Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy [none]
+[debug] [2023-10-15T16:09:35.338Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy 200
+[debug] [2023-10-15T16:09:35.339Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy {"projectId":"gpt-bookbuddy","projectNumber":"999723883593","displayName":"gpt-bookbuddy","name":"projects/gpt-bookbuddy","resources":{"hostingSite":"gpt-bookbuddy"},"state":"ACTIVE","etag":"1_860b4843-546f-43c3-9b49-e1c2b498ebde"}
+[debug] [2023-10-15T16:09:49.737Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/home/rishabnt/Code/gpt-bookbuddy/node_modules/next/dist/server/config.js:571:41)
+    at getConfig (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:304:28)
+    at build (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:60:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async prepareFrameworks (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-10-15T16:12:57.856Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:12:57.857Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase deploy
+[debug] [2023-10-15T16:12:57.857Z] CLI Version:   11.24.1
+[debug] [2023-10-15T16:12:57.858Z] Platform:      linux
+[debug] [2023-10-15T16:12:57.858Z] Node Version:  v18.13.0
+[debug] [2023-10-15T16:12:57.858Z] Time:          Sun Oct 15 2023 21:42:57 GMT+0530 (India Standard Time)
+[debug] [2023-10-15T16:12:57.858Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-15T16:12:57.914Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-15T16:12:57.915Z] > authorizing via signed-in user (rishab.james@gmail.com)
+[debug] [2023-10-15T16:12:57.915Z] [iam] checking project gpt-bookbuddy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-15T16:12:57.917Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions [none]
+[debug] [2023-10-15T16:12:57.917Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions x-goog-quota-user=projects/gpt-bookbuddy
+[debug] [2023-10-15T16:12:57.917Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:12:59.246Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions 200
+[debug] [2023-10-15T16:12:59.247Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:12:59.249Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy [none]
+[debug] [2023-10-15T16:12:59.633Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy 200
+[debug] [2023-10-15T16:12:59.634Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy {"projectId":"gpt-bookbuddy","projectNumber":"999723883593","displayName":"gpt-bookbuddy","name":"projects/gpt-bookbuddy","resources":{"hostingSite":"gpt-bookbuddy"},"state":"ACTIVE","etag":"1_942f7d5e-f9c2-43da-9999-e0f54cdb05e7"}
+[debug] [2023-10-15T16:13:01.233Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites pageToken=&pageSize=10
+[debug] [2023-10-15T16:13:02.191Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites 200
+[debug] [2023-10-15T16:13:02.192Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites {"sites":[{"name":"projects/gpt-bookbuddy/sites/gpt-bookbuddy","defaultUrl":"https://gpt-bookbuddy.web.app","appId":"1:999723883593:web:1f4978e5d82abb699f3398","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-15T16:13:02.192Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config [none]
+[debug] [2023-10-15T16:13:03.421Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config 200
+[debug] [2023-10-15T16:13:03.421Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config {"projectId":"gpt-bookbuddy","appId":"1:999723883593:web:1f4978e5d82abb699f3398","storageBucket":"gpt-bookbuddy.appspot.com","apiKey":"AIzaSyBtDAF-P83iHmaShQUFQ42ENqYU-jNmHk4","authDomain":"gpt-bookbuddy.firebaseapp.com","messagingSenderId":"999723883593","measurementId":"G-LCDY8NWNZG"}
+[debug] [2023-10-15T16:13:25.984Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/home/rishabnt/Code/gpt-bookbuddy/node_modules/next/dist/server/config.js:571:41)
+    at getConfig (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:304:28)
+    at build (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:60:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async prepareFrameworks (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-10-15T16:14:11.720Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:14:11.722Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase emulators:start
+[debug] [2023-10-15T16:14:11.722Z] CLI Version:   11.24.1
+[debug] [2023-10-15T16:14:11.723Z] Platform:      linux
+[debug] [2023-10-15T16:14:11.723Z] Node Version:  v18.13.0
+[debug] [2023-10-15T16:14:11.723Z] Time:          Sun Oct 15 2023 21:44:11 GMT+0530 (India Standard Time)
+[debug] [2023-10-15T16:14:11.723Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-15T16:14:11.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-15T16:14:11.967Z] > authorizing via signed-in user (rishab.james@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2023-10-15T16:14:11.973Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-15T16:14:11.973Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-15T16:14:11.973Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-10-15T16:14:11.980Z] [hub] writing locator at /tmp/hub-gpt-bookbuddy.json
+[debug] [2023-10-15T16:14:11.995Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy [none]
+[debug] [2023-10-15T16:14:12.450Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy 200
+[debug] [2023-10-15T16:14:12.450Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy {"projectId":"gpt-bookbuddy","projectNumber":"999723883593","displayName":"gpt-bookbuddy","name":"projects/gpt-bookbuddy","resources":{"hostingSite":"gpt-bookbuddy"},"state":"ACTIVE","etag":"1_942f7d5e-f9c2-43da-9999-e0f54cdb05e7"}
+[debug] [2023-10-15T16:14:13.922Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites pageToken=&pageSize=10
+[debug] [2023-10-15T16:14:14.898Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites 200
+[debug] [2023-10-15T16:14:14.899Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites {"sites":[{"name":"projects/gpt-bookbuddy/sites/gpt-bookbuddy","defaultUrl":"https://gpt-bookbuddy.web.app","appId":"1:999723883593:web:1f4978e5d82abb699f3398","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-15T16:14:14.899Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config [none]
+[debug] [2023-10-15T16:14:15.922Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config 200
+[debug] [2023-10-15T16:14:15.923Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config {"projectId":"gpt-bookbuddy","appId":"1:999723883593:web:1f4978e5d82abb699f3398","storageBucket":"gpt-bookbuddy.appspot.com","apiKey":"AIzaSyBtDAF-P83iHmaShQUFQ42ENqYU-jNmHk4","authDomain":"gpt-bookbuddy.firebaseapp.com","messagingSenderId":"999723883593","measurementId":"G-LCDY8NWNZG"}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2023-10-15T16:14:16.830Z] TypeError: next is not a function
+    at getDevModeHandle (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:279:21)
+    at prepareFrameworks (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:251:20)
+    at async Object.startAll (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/emulator/controller.js:295:9)
+    at async /home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/commands/emulators-start.js:32:43
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-10-15T16:15:11.484Z] ----------------------------------------------------------------------
+[debug] [2023-10-15T16:15:11.486Z] Command:       /home/rishabnt/.nvm/versions/node/v18.13.0/bin/node /home/rishabnt/.nvm/versions/node/v18.13.0/bin/firebase deploy
+[debug] [2023-10-15T16:15:11.486Z] CLI Version:   11.24.1
+[debug] [2023-10-15T16:15:11.486Z] Platform:      linux
+[debug] [2023-10-15T16:15:11.487Z] Node Version:  v18.13.0
+[debug] [2023-10-15T16:15:11.487Z] Time:          Sun Oct 15 2023 21:45:11 GMT+0530 (India Standard Time)
+[debug] [2023-10-15T16:15:11.487Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-15T16:15:11.543Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-15T16:15:11.543Z] > authorizing via signed-in user (rishab.james@gmail.com)
+[debug] [2023-10-15T16:15:11.543Z] [iam] checking project gpt-bookbuddy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-15T16:15:11.545Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions [none]
+[debug] [2023-10-15T16:15:11.545Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions x-goog-quota-user=projects/gpt-bookbuddy
+[debug] [2023-10-15T16:15:11.545Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:15:12.864Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions 200
+[debug] [2023-10-15T16:15:12.865Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpt-bookbuddy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-15T16:15:12.866Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy [none]
+[debug] [2023-10-15T16:15:13.576Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy 200
+[debug] [2023-10-15T16:15:13.576Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpt-bookbuddy {"projectId":"gpt-bookbuddy","projectNumber":"999723883593","displayName":"gpt-bookbuddy","name":"projects/gpt-bookbuddy","resources":{"hostingSite":"gpt-bookbuddy"},"state":"ACTIVE","etag":"1_942f7d5e-f9c2-43da-9999-e0f54cdb05e7"}
+[debug] [2023-10-15T16:15:15.127Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites pageToken=&pageSize=10
+[debug] [2023-10-15T16:15:16.034Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites 200
+[debug] [2023-10-15T16:15:16.035Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gpt-bookbuddy/sites {"sites":[{"name":"projects/gpt-bookbuddy/sites/gpt-bookbuddy","defaultUrl":"https://gpt-bookbuddy.web.app","appId":"1:999723883593:web:1f4978e5d82abb699f3398","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-15T16:15:16.036Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config [none]
+[debug] [2023-10-15T16:15:17.058Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config 200
+[debug] [2023-10-15T16:15:17.058Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:999723883593:web:1f4978e5d82abb699f3398/config {"projectId":"gpt-bookbuddy","appId":"1:999723883593:web:1f4978e5d82abb699f3398","storageBucket":"gpt-bookbuddy.appspot.com","apiKey":"AIzaSyBtDAF-P83iHmaShQUFQ42ENqYU-jNmHk4","authDomain":"gpt-bookbuddy.firebaseapp.com","messagingSenderId":"999723883593","measurementId":"G-LCDY8NWNZG"}
+[debug] [2023-10-15T16:15:28.982Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/home/rishabnt/Code/gpt-bookbuddy/node_modules/next/dist/server/config.js:571:41)
+    at getConfig (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:304:28)
+    at build (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:60:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async prepareFrameworks (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:261:108)
+    at async deploy (/home/rishabnt/.nvm/versions/node/v18.13.0/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
