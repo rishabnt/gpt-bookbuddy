@@ -35,7 +35,6 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
                 },
                 body: JSON.stringify({messages: [message]}),
             });
-            // console.log(response.body)
             if(!response.ok) {
                 throw new Error()
             }
@@ -77,7 +76,6 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
             }, 10)
         },
         onError(_, message) {
-            console.log('Got called')
             toast.error('Something went wrong, please try again.');
             removeMessage(message.id)
             textareaRef.current?.focus()
@@ -107,7 +105,8 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
                     disabled={isLoading}
                     autoFocus
                     placeholder='Write a message...'
-                    className='peer disabled:opacity-50 pr-14 resize-none block w-full border-0 bg-zinc-100 px-1.5 py-1.5 text-gray-900 focus:ring-0 text-sm sm:leading-6'/>
+                    className='peer disabled:opacity-50 pr-14 resize-none block w-full border-0 bg-zinc-100 px-1.5 py-1.5 text-gray-900 focus:ring-0 text-sm sm:leading-6'
+                />
                 <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
                     <kbd className='inline-flex items-center rounded border bg-white border-gray-200 px-1 font-sans text-xs text-gray-400'>
                         {isLoading ? 

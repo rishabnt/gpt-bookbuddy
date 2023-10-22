@@ -28,8 +28,7 @@ export async function POST(req: Request) {
         stream: true, 
         n: 1
     }
-
     const stream = await OpenAiStream(payload);
-    // console.log(stream)
+    
     return new Response(stream)
 }
